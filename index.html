@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlimFileShare - Dosya Yükleme</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; }
+        .container { max-width: 500px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        h1 { text-align: center; color: #333; }
+        input[type="file"] { margin-bottom: 20px; display: block; width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        button { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>AlimFileShare</h1>
+    <p>Paylaşmak istediğiniz dosyayı seçin.</p>
+
+    <form action="upload_script.php" method="POST" enctype="multipart/form-data">
+        
+        <input type="file" name="dosya" id="fileToUpload" required>
+        
+        <button type="submit">Dosyayı Yükle ve Paylaş</button>
+    </form>
+    
+    <div id="sonucAlani" style="margin-top: 20px; color: blue;">
+        </div>
+</div>
+
+</body>
+</html>
